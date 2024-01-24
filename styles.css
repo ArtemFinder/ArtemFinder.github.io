@@ -1,0 +1,596 @@
+/*****************************/
+/*         CSS RESET         */
+/*****************************/
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;}
+p,blockquote,q,pre,address,hr,code,samp,dl,ol,ul,table,menu{margin-bottom:1em;}
+html{font-size:100%;}
+body{font-family:verdana, arial, helvetica, sans-serif; font-size:11px; line-height:1.6; color: #777}
+h1,h2,h3,h4,h5,h6{font-weight:bold;margin-bottom:10px;}
+h1{font-size:3em;line-height:1.1;}
+h2{font-size:2em;line-height:1.15;}
+h3{font-size:1.5em;line-height:1.2;}
+h4{font-size:1.25em;line-height:1.25;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+code,kbd,pre,samp,tt{font-family:"andale mono",consolas,monaco,"lucida console","courier new",courier,monospace;line-height:1.3;}
+pre{white-space:pre-wrap;}
+abbr,acronym,dfn{border-bottom:1px dotted;cursor:help;font-variant:normal;font-style:normal;}
+var{font-style:normal;}
+center{text-align:center;}
+a:focus{outline:1px dotted;}
+img{border:0;}
+ul{list-style:disc outside none;}
+ol{list-style:decimal outside none;}
+li{margin-left:2em;}
+li ul,li ol{margin-bottom:0;}
+dd{margin-bottom:1em;}
+hr{border:0;border-bottom:1px solid;}
+big{font-size:1.25em;}
+small,sub,sup{font-size:.85em;}
+sub,sup{line-height:1;}
+sub{vertical-align:bottom;}
+sup{vertical-align:top;}
+del,s,strike{text-decoration:line-through;}
+ins{text-decoration:none;border-bottom:1px dotted;}
+bdo{border-bottom:1px dotted;}
+u{text-decoration:underline;}
+fieldset{padding:1em;}
+legend{font-weight:bold;padding:0 .25em;}
+input,textarea,select,button{font-family:inherit;font-size:1em;}
+input[type=button],input[type=file],input[type=image],input[type=reset],input[type=submit],button[type=button],button[type=reset],button[type=submit]{cursor:pointer;line-height:1;}
+input[type=text],input[type=password],textarea{padding:1px;}
+textarea{text-align:left;line-height:1.25;}
+table{border-collapse:collapse;border-spacing:0;border:0;line-height:1.3;}
+caption,th,td{text-align:left;vertical-align:top;}
+th,td{border:1px solid;padding:.5em 1em;}
+caption{padding-bottom:1em;}
+h5,h6{font-size:1em;}
+em,i,blockquote,q,cite{font-style:italic;}
+strong,b,dt,th{font-weight:bold;}
+/*****************************/
+     /* /END RESET */
+/*****************************/
+
+/***********************************************************/
+/****************** Masonry Column Set *********************/
+/***********************************************************/
+.col1 { width: 80px; }
+.col2 { width: 180px; }
+.col3 { width: 280px; }
+.col4 { width: 380px; }
+.col5 { width: 480px; }
+.col1 img { max-width: 80px;  }
+.col2 img { max-width: 180px; }
+.col3 img { max-width: 280px; }
+.col4 img { max-width: 380px; }
+.col5 img { max-width: 480px; }
+/***********************************************************/
+/***************** /Masonry Column Set *********************/
+/***********************************************************/
+
+
+
+/*********************************************************/
+/****************** Alternate Styles *********************/
+/*********************************************************/
+
+body.dark          { background: url(images/darkPattern.jpg) fixed; color:#888 }
+body.dark.stripe   { background: url(images/stripe.gif) no-repeat fixed #0d0d11; }
+body.dark.grunge   { background: url(images/darkGrunge.jpg) fixed; }
+body.dark.blue     { background: #172930;}
+
+body.light         { background: url(images/lightPatternMain.jpg) fixed; color:#333}
+body.light.clouds  { background: url(images/lightClouds.jpg) fixed;}
+body.light.grunge  { background: url(images/lightGrunge.jpg) fixed;}
+body.light.flowers { background: url(images/lightPattern2.jpg) fixed;}
+
+/***********************************************************/
+/****************** General page styles ********************/
+/***********************************************************/
+
+h1 {}
+
+h1,h2,h3,h4,h5,h6 { margin:0;padding:0; color:#CCC }
+
+body.light h1, body.light h2, body.light h3, body.light h4, body.light h5 {color:#333}
+
+a { color: #999; }
+
+a:hover { text-decoration: none; border-bottom:1px dotted #fff}
+
+ul {
+	margin:0 20px 0 10px;
+	font-size:13px;
+	color: #CCC;
+}
+
+body.light ul {color:#666}
+
+#leftColumn {
+	float:left;
+	width:200px;
+	height:3000px;
+	padding:40px 20px 0;
+	left:40px;
+	position:fixed;
+	text-align:center;
+}
+
+#portfolio { /* MAIN Content area */
+	margin:0 0 0 330px;
+	overflow:hidden;
+	padding:30px 0;
+	position:relative
+}
+
+body.dark #leftColumn {  /* Alternate Color styles */
+	border-left:1px solid #141414;
+	border-right:1px solid #000;
+	background:url(images/transparent-Dark.png);
+	    -moz-box-shadow: 0px 2px 12px #000;
+     -webkit-box-shadow: 0px 2px 6px #000;
+             box-shadow: 0px 2px 6px #000;
+}
+
+body.light #leftColumn {  /* Alternate Color styles */
+	border-left:1px solid #CCC;
+	border-right:1px solid #999;
+	background:url(images/leftColBG-Light.jpg) #fff repeat-y;
+	    -moz-box-shadow: 1px 1px 6px #999;
+     -webkit-box-shadow: 1px 1px 6px #333;
+             box-shadow: 1px 1px 6px #333;
+}
+
+
+/***************************************************************/
+/************   Left Column Sorting Nav   **********************/
+/***************************************************************/
+
+#filtering-nav {margin:2em 0;}
+
+#filtering-nav li {
+    list-style: none;
+    margin:0;
+    padding:0
+}
+
+#filtering-nav li a  {
+    display: block;
+    padding: 2px ;
+    margin: 0 10px 12px;
+    text-decoration:none;
+    letter-spacing:.1em;
+    font-size:15px;
+}
+
+#filtering-nav.rounded li a  {
+	-moz-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#filtering-nav li a:focus {outline:none;}
+
+body.dark #filtering-nav li a {/* Alternate Color styles */
+    color:#CCC;
+    border-left:1px solid #1a1a1a;
+    border-top:1px solid #1a1a1a;
+    border-right:1px solid #0c0c0c;
+    border-bottom:1px solid #0c0c0c;
+	background: url(images/darkButton.jpg) 0 0 repeat-x;
+}
+
+body.dark #filtering-nav li a:hover  {/* Alternate Color styles */
+	background: url(images/darkButton.jpg) 0 -45px repeat-x;
+}
+
+body.dark #filtering-nav li a:active  {/* Alternate Color styles */
+	background: url(images/darkButton.jpg) 0 -90px repeat-x;
+}
+
+body.light #filtering-nav li a  {/* Alternate Color styles */
+    color: #333;
+    border-left:1px solid #d4d4d4;
+    border-top:1px solid #d4d4d4;
+    border-right:1px solid #bbb;
+    border-bottom:1px solid #bbb;
+	background: url(images/lightButton.jpg) 0 0 repeat-x;
+	-moz-box-shadow:0px 1px 0px #999;
+    -webkit-box-shadow:0px 1px 0px #999;
+    box-shadow:0px 1px 0px #999;
+}
+
+body.light #filtering-nav li a:hover {/* Alternate Color styles */
+	background: url(images/lightButton.jpg) 0 -34px repeat-x;}
+
+body.light #filtering-nav li a:active {/* Alternate Color styles */
+	background: url(images/lightButton.jpg) 0 -68px repeat-x;}
+
+/* Nav button specific styles if you need them */
+#filtering-nav .all {}
+#filtering-nav .web {}
+#filtering-nav .photo {}
+#filtering-nav .illustration {}
+#filtering-nav .print {}
+#filtering-nav .about {
+	margin:30px 35px 0px;
+	text-transform:uppercase;
+	font-size:13px;
+	padding:5px;
+	}
+
+
+/***************************************************************/
+/**********************   Gallery Boxes   **********************/
+/***************************************************************/
+
+.box {
+    margin:0 0 16px 0;
+    background: #000;
+    float: left;
+    overflow:hidden;
+    border:1px solid #000;
+/*-webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;*/
+}
+
+.box img {float:left;}
+
+body.dark .box { /* Alternate Color styles */
+    background: #000;
+    border:1px solid #000;
+	    -moz-box-shadow: 0px 2px 6px #000;
+     -webkit-box-shadow: 0px 2px 6px #000;
+             box-shadow: 0px 2px 6px #000;
+}
+
+body.light .box { /* Alternate Color styles */
+    background:#ddd;
+    border:2px solid #fff;
+	    -moz-box-shadow: 1px 1px 6px #333;
+     -webkit-box-shadow: 1px 1px 6px #333;
+             box-shadow: 1px 1px 6px #333;
+}
+
+	/******************************************************************************************/
+	/* These are if you want to style a certain box category. - Maybe different background colors for each? */
+	.box.web { }
+	.box.photo { }
+	.box.illustration { }
+	.box.print { }
+	.box.about p { /* Some styles for 'about' boxes only */
+		margin:5px 20px;
+		padding:10px 0}
+	.box.about h5 {
+		margin:8px 0 8px 20px;
+		font-size:24px;
+		line-height:1em}
+	.box.about img {margin-bottom:10px;}
+	/******************************************************************************************/
+	
+
+.description {
+	position:absolute;
+    border-top:1px solid #333;
+    border-bottom:1px solid #333;
+	padding:10px 0;
+	bottom: 10px;
+	background:#000;
+	width:100%;
+	left:-100%;
+	background:url(images/transparent-Dark.png);
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+.description h5 {
+	font-size:16px;
+	margin:0 10px;
+	line-height:1em;
+}
+
+.description span {
+	font-size:10px;
+	display:block;
+	color:#FFF;
+}
+
+.description p {
+	padding:0;
+	font-size:10px;
+	margin:4px 10px 0;
+	line-height:1.2em;
+}
+
+body.light .description h5, body.light .description p {/* Alternate Color styles */
+	color:#888; }
+
+a.button {
+	margin:10px 10px 0;
+	font-weight:bold;
+	float:right;
+	font-size:9px;
+	line-height:1.4em;
+	display:block;
+	padding:0px 6px;
+	background:#000;
+	text-decoration:none;
+	border:1px solid #333;
+}
+
+a.button:hover {background-color: #333;}
+
+/* Magnifying Glass */
+a.zoom span {
+	display:none;
+	position: absolute;
+	right:4px;
+	top:4px;
+	background:url(images/magnify.png) no-repeat;
+	width:23px;
+	height:22px;
+	text-indent:-9999px
+}
+
+.social {
+	display:block;
+	float:left;
+	margin:0 0 10px 20px;
+}
+
+.social:hover {
+	border:none;
+	position: relative;
+	top:2px;
+}
+
+p.quote {
+	font-size:17px;
+	font-style:italic;
+	line-height:1.4em;
+	position:relative;
+	top:-10px;
+}
+
+cite {
+	text-align:right;
+	color: #999;
+	display:block;
+	font-size:14px;
+	margin:-24px 20px 10px 0
+}
+
+body.light cite {color:#333}
+
+/***********************************************************/
+/*************** About Me & Contact Form *******************/
+/***********************************************************/
+#contactBox {
+	overflow:hidden;
+	padding-bottom:10px;
+}
+
+#info {
+	margin:0;
+	width:160px;
+	float:left
+	}
+
+#info ul {
+	list-style:none;
+	margin:5px 0 5px 5px;
+	padding:0;
+	text-transform:uppercase;
+}
+
+#info ul li {
+	padding:2px 0;
+	background:none;
+	font-size:11px;
+	line-height:normal
+}
+
+	/********
+	// Begin Contact Form
+	*********/
+	
+	ul.form {list-style:none;padding:0;border:0;margin:0;background:none;}
+	ul.form li {background:none;margin:0!important;padding:0;line-height:normal;}
+	
+	#contactForm {
+		text-align:right;
+		margin:0px 20px 0 0;
+		width:190px;
+		float:left
+		} 
+	
+	#contactForm form {font-size:12px;}
+		
+	#contactForm label {
+		display:block;
+		float:left;
+		font-size:15px;
+		margin:0;
+		padding:0;
+		width:100%;
+		}
+		
+	#contactForm fieldset {padding:0;border:none;}
+		
+	#contactForm textarea {height:70px;}
+	
+	#contactForm textarea, #contactForm input {
+		background:#252525;
+		font-size:11px;
+		border:none;
+		padding:2px;
+		margin-bottom:5px;
+		width:165px;
+		border:1px solid #333;
+		color:#FFF
+		}
+		
+	body.light #contactForm textarea, body.light #contactForm input {
+		background:#fff; border:1px solid #999; color:#333 }
+		
+	#contactForm input.submit {
+		cursor:pointer;
+		background:none;
+		width:70px;
+		font-size:10px;
+		font-family:Georgia, "Times New Roman", Times, serif;
+		color:#CCC;
+		text-transform:uppercase
+		}
+		
+	body.light #contactForm input.submit { color:#666 }
+		
+	.valid {border:1px solid green !important;}
+	.invalid {border:1px solid red !important;}
+		
+	/********
+	// End Contact Form
+	*********/
+
+/***********************************************************/
+/*************** /About Me & Contact Form *******************/
+/***********************************************************/
+
+
+
+/***********************************************************/
+/********************* Layout Switcher *********************/
+/***********************************************************/
+.panel {
+	position:fixed;
+	z-index:2;
+	top: 25px;
+	right: 0;
+	display: none;
+	background: #000;
+	color:#999;
+	width: 330px;
+	height: auto;
+	padding:10px 30px 20px;
+	filter: alpha(opacity=90);
+	opacity: .90;
+	-moz-border-radius-topleft: 10px;
+	-webkit-border-top-left-radius: 10px;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+}
+
+body.light .panel {
+	background: #FFF;
+	color: #000;
+	-moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+	filter: alpha(opacity=85);
+	opacity: .85;
+}
+
+.panel h2 { margin-bottom:5px;}
+
+body.light .panel h2 {color: #333}
+
+.panel ul {margin:20px 0; padding:0}
+.panel ul li { margin-left:20px}
+.panel ul a {text-decoration:none;}
+.panel ul a:hover { color:#FFF; font-weight:bold; border:none}
+.panel ul ul {list-style:square; margin:0}
+
+
+body.light .panel ul a {text-decoration:none; color: #333}
+body.light .panel ul a:hover { color:#333}
+
+.panel .notes {float:right;}
+
+.panel .notes p {
+	width:120px;
+	border:1px solid #333;
+	padding:10px;
+	font-size:11px;
+	margin:10px 0;
+	color:#CCC;
+	overflow:hidden
+}
+
+body.light .panel .notes p {
+	color:#000; background:#eaeaea}
+
+.notesButton {
+	display:block;
+	background:#111;
+	border:1px solid #333;
+	color:#FFF;
+	text-align:center;
+	padding:3px;
+	font-size:11px;
+	text-decoration:none;
+	margin:0px 0 3px 0;
+}
+
+.notesButton:hover {
+	background:#222;
+	border:1px solid #333;
+}
+
+body.light .panel .notesButton {
+	background: #999;
+	border:1px solid #333;
+	color:#000;
+}
+body.light .panel .notesButton:hover {background:#ccc;}
+
+a.trigger{
+	position:fixed;
+	z-index:1;
+	display: block;
+	text-decoration: none;
+	top: 0px; right: 0;
+	font-size: 12px;
+	font-family: verdana, helvetica, arial, sans-serif;
+	padding:3px 25px;
+	color: #fff;
+	background: #333;
+	-moz-border-radius-bottomleft: 10px;
+	-webkit-border-bottom-left-radius: 10px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+}
+
+a.trigger:hover{
+	background:#000;
+	color:#FFF;
+	border:none
+}
+
+a.active.trigger {
+	background:#000;
+	color:#ccc;
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	filter: alpha(opacity=90);
+	opacity: .90;
+}
+
+a.trigger:focus {outline:none;}
+
+body.light a.trigger {
+	background: #FFF;
+	color: #000;
+	-moz-box-shadow:1px 1px 4px #666;
+    -webkit-box-shadow:1px 1px 4px #666;
+    box-shadow:1px 1px 4px #666;
+}
+
+/***********************************************************/
+/********************* /Layout Switcher ********************/
+/***********************************************************/
+

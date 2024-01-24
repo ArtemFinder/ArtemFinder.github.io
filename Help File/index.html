@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Look At Me | Help File</title>
+
+	<style type="text/css" media="screen">
+		body { background: #bbb; 
+			font-family:"Trebuchet MS", Arial, Helvetica, sans-serif; 
+			font-size:14px; 
+			margin:0; 
+			padding:0}
+		.container {
+			width:800px; 
+			margin:-100px auto; 
+			background: #ececec; 
+			color: #333; 
+			padding:20px 40px; 
+			border:4px solid #fff;
+			-moz-box-shadow: 0px 2px 8px #000;
+			-webkit-box-shadow: 0px 2px 8px #000;
+			box-shadow: 0px 2px 8px #000;
+			position:relative;
+			z-index:2
+			}
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		h1, h2, h3, h4, h5, h6 { font-family:Georgia, "Times New Roman", Times, serif}
+		img {border:1px solid #999}
+		#head, #footer {
+			background:#666; 
+			color:#FFF;
+			text-align:center; 
+			padding:10px; 
+			margin-bottom:20px; 
+			border-top:4px solid #fff; 
+			border-bottom:4px solid #fff;
+			height:100px;}
+		.title { padding:20px; background: #333; text-align:center; color:#FFF; border:4px solid #fff;
+			-moz-box-shadow: 0px 1px 6px #000;
+			-webkit-box-shadow: 0px 1px 6px #000;
+			box-shadow: 0px 1px 6px #000;}
+		a { color:#360}
+		.top { font-size:12px}
+		legend {
+			color: #202020;
+			font-size: 18px;
+			padding: 0 10px;}
+			fieldset {padding:20px; margin:20px 0}
+	</style>
+    
+</head>
+
+
+<body>
+<div id="head">
+</div>
+        
+<div class="container">
+    
+  <div class="title">
+    <h1>"Look At Me"</h1>
+    <h3 style=" font-style:italic; color:#CCC">Portfolio/Design Gallery</h3>
+  </div>		
+		
+  <div>
+<p>By: Sirat<br>
+					Themeforest: <a href="http://themeforest.net/user/Sirat">Sirat portfolio</a><br>
+					Personal site: <a href="http://ericportfolio.com">ericportfolio.com</a>
+	</p>
+<div>
+				<p>Thank you for buying my theme. If you have any questions that are beyond the scope of this help file, please feel free to email me through my user page <a href="http://themeforest.net/user/Sirat">contact form</a>. Thanks!</p>
+			</div>
+		</div>
+ 
+ 
+<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol  style="padding-bottom:20px">
+			<li><a href="#nav">The left Column/Nav</a></li>
+      <li><a href="#htmlStructure">Setting up your gallery</a></li>
+			<li><a href="#changer">Style Changer</a></li>
+      <li><a href="#fonts">CUFON fonts</a></li>
+			<li><a href="#cssFiles">CSS</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#contact">Contact Form Config</a></li>
+			<li><a href="#credits">Assets</a></li>
+			
+		</ol>
+        
+        
+		
+		<fieldset>
+		  <legend id="nav">The left Column/Nav - <a class="top" href="#toc">top</a></legend>
+        <img src="images/nav.jpg" width="627" height="209">
+        <p>This isn't your normal Navigation. It uses the Masonry script to sort the gallery boxes on the right.<br>
+        The class names are for styling and the HREF is for sorting.<br>
+        What a button says doesn't have to be the same as it's class name and HREF.</p>
+        <p>You can add or remove nav items. If you remove all the nav items, the site will work fine, it just won't sort by category.<br>If you want to add a new category, give it a new class name and HREF then make sure you add that class to the gallery boxes that fit in the new category.</p>
+        <p>The 'About Me' category is one I set up special. A sort of contact page. Feel free to add more boxes with the 'about' class and they will all remain when About Me is clicked.</p>
+       
+</fieldset>
+
+<fieldset>
+		
+        <legend id="htmlStructure">Setting up your gallery - <a class="top" href="#toc">top</a></legend>
+		
+      <p>The following is the code showing the second thumbnail box on the demo page:</p>
+      <img src="images/box.jpg">
+      <p>Each <strong>'thumbnail'</strong> box looks similar to this. You can copy this block and change the image file names and text to make your own thumbnail boxes.</p>
+      <p>Here are the important parts.</p>
+      <ol>
+        <li>
+          <p>The main div needs a class of <strong>'box'</strong> and<strong> 'col' </strong>class. The col class can be<strong> col1, col2, col3, col4 or col5</strong>. These classes set the max-width of the thumb box. Most of the boxes on my demo are set at col2. The alternate layout page has more random widths for the col classes. The col class widthsare set first thing in the stylesheet and look like this:<br><img src="images/cols.jpg" width="481" height="257"><br>You can modify them if you like.</p></li>
+        <li>
+          <p>The last class in this case is 'Web' which is used to identify groups of thumbs if you want to style a catagory in a specific manner, more importantly though, Masonry uses that class name to sort the groups..</p></li>
+        
+        <li>
+          <p>The first thing in each box is the A tag that wraps the thumbnail. The thumbnail and the image that the A link points to are the same image. The A points to the larger version. The A needs a class of '<strong>pirobox</strong>' to call the enlarging script, and a '<strong>zoom</strong>' class to show the magnifying class. If you give the A tag a Title, it will show up when Zoomed.</p></li>
+        
+        <li>
+          <p>Finally comes the '<strong>Description</strong>' div. You can put what you want in this div. This example starts with the image name in an H5 with it's 'category' wrapped in a span. Then a short description. Then an outgoing link with a <strong>'button'</strong> class which styles like you see in the demo.</p></li>
+          
+          <li>
+            <p>The final important thing to note is that the thumbnail box has a <strong>'category'</strong> class of <strong>'web'</strong> in this case. All thumb boxes with the same <strong>'category'</strong> class will get sorted by the <strong>Masonry </strong>script when the left nav link is clicked.</p></li>
+            
+            <li>
+              <p>Please be aware that you can use a different <strong>'col'</strong> class on each box to get interesting layouts. Keep in mind that gallery will expand to fill a persons monitor, so it will look different on every monitor unless you make them all the same 'col' (width).</p></li>
+          
+      </ol>
+      
+</fieldset> 
+     
+     <fieldset> 
+	 <legend id="changer">Style Changer - <a class="top" href="#toc">top</a></legend>
+		<p>The <strong>Style Changer</strong> is mostly to give people ideas on what can be done with this template. I am, however, going to leave it in if you want to do anything fun with it.</p>
+		<p>Keep in mind though that it's not cookie based so if someone changes the style, leaves the page, and returns, the styles will return to default.</p>
+    <p>The switcher code is in the main.js file. It works by attaching class names to the body tag when a specific link is clicked. You can add more if you like, or change the styles in the stylesheet for the ones already there.</p>
+		<p>The Demo page comes with a class of '<strong>dark</strong>'.That gives you the default dark page. You'll always want the BODY tag to have a class of either '<strong>dark</strong>' or <strong>'light</strong>'.  If you want the site to always be<strong> 'dark stripe'</strong> or <strong>' light clouds'</strong>, you could remove the Style Changer and simply add those classes to the <strong>BODY</strong> of the page permanently.</p>
+</fieldset>	
+
+<fieldset>
+    <legend id="fonts">CUFON Fonts - <a class="top" href="#toc">top</a></legend>
+    <p>The code responsible for CUFON fonts is at the top of the index.html file.</p>
+    <img src="images/cufon.jpg" width="768" height="389">
+</fieldset>    
+
+
+<fieldset>
+<legend id="cssFiles">CSS - <a class="top" href="#toc">top</a></legend>
+
+		<p>There is 1 main CSS file - styles.css. There is also a PiroBox stylesheet but you probably don't need to mess with it.</p> 
+		
+		
+<p>The file is separated into sections:<br><br>
+        
+        /****************** Masonry Column Set *********************/<br>
+        <br>
+/********************* Alternate Styles ***********************/<br>
+        <br>
+/****************** General page styles *********************/<br><br>
+        /***************   Left Column Sorting Nav   ******************/<br><br>
+        /**********************   Gallery Boxes   *************************/<br><br>
+        /*************** About Me &amp; Contact Form ***************/<br><br>
+        /********************* Layout Switcher **********************/<br><br>
+		If you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited. 
+</p>
+        
+       
+</fieldset>
+       
+<fieldset>		
+<legend id="javascript">JavaScript/jQuery - <a class="top" href="#toc">top</a></legend>
+		
+		<p>This theme imports 17 Javascript files, 2 remote and 14 in the js folder.</p>
+		
+		<ol>
+		  <li><code>http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js</code> - <strong>jQuery Library</strong><br>
+	      </li>
+		  <li><code>js/jquery.easing.1.3.js</code> - <strong>jQuery Easing effects</strong></li>
+		  <li><code>js/form.js</code> - <strong>Send Form script</strong></li>
+		  <li><code>js/pirobox.js</code> - <strong>PiroBox image Zoom</strong></li>
+		  <li><code>js/main.js</code> - <strong>Assorted activation scripts </strong></li>
+		  <li><code>js/jquery-ui-1.8.2.custom.min.js</code> - <strong>jQuery Custom UI</strong></li>
+          <li><code>js/jquery.masonry.js</code> - <strong>Masonry</strong></li>
+          <li><code>http://cufon.shoqolate.com/js/cufon-yui.js</code> - <strong>CUFON</strong></li>
+          <li><code>js/fonts/</code> - <strong>9 CUFON font scripts</strong></li>
+		</ol>
+</fieldset>
+		
+		
+<fieldset>		
+<legend id="contact">Contact form Configuration - <a class="top" href="#toc">top</a></legend>
+		<p>
+			open the <strong>"js/send.php"</strong>, find this line and change null@null.com to your email address:<br><br>
+            <img src="images/email.jpg" alt="" />
+		</p>
+		<p>Everyone uses different hosting servers and some people have mentioned getting 'Permission' errors when using this kind of mail script. This is server specific with no single answer but previous people have done the following to get it working:<br>
+		Use your FTP or telnet client to change the <strong>permissions</strong> to <strong>755 </strong>on “<strong>send.php</strong>” and “<strong>form.js</strong>” <br> 
+		If that doesn't help, you'll need to talk to your hostings tech support. Luck.</p>
+</fieldset>
+		
+<fieldset>		
+		<legend id="credits">3rd Party Assets - <a class="top" href="#toc">top</a></legend>
+		
+		<p>I've used the following images, icons or other files as listed.</p>
+		
+	<ul>
+<li>The Images are all mine, a friends or <strong>Envatos</strong> and you can have them but not to sell.</li>
+            <li><a href="http://cufon.shoqolate.com/generate/">Cufon Fonts</a> - For more info about <strong>CUFON</strong></li>
+            <li><a href="http://www.softicons.com/free-icons/social-media-icons/social-networking-icons-by-wpzoom/zanatic-icon">Zanatic Social Icons</a> - Free set of Social Icons if you need more.</li>
+            <li><a href="http://desandro.com/resources/jquery-masonry/">Masonry</a> - For more info about the Masonry script by<strong> David Desandro</strong>.</li>
+            <li><a href="http://www.pirolab.it/pirobox/">Piro Box</a>- For more info about <strong>PiroBox</strong> lightbox alternative.</li>
+	</ul>
+		
+</fieldset>
+		
+		<p>Thanks for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme, please feel free to email me through my user page <a href="http://themeforest.net/user/Sirat">contact form</a>. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+		<p><strong><em>~ SIRAT</em></strong></p>
+		<p>P.S. Have fun with your new gallery... :)</p> 
+		
+        
+    <hr class="space">
+        
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		
+	</div><!-- end div .container -->
+   
+   
+<div id="footer" style="margin:20px 0 0 0;">
+</div>
+    
+</body>
+</html>
